@@ -33,7 +33,7 @@ const bot = new Discord.Client(); // Création Client
 bot.commands = new Discord.Collection(),
 dbl = new DBL(keys.dbl, bot),
 
-bot.login(config.token); // Se connecte à Discord
+bot.login(process.env.TOKEN); // Se connecte à Discord
 
 dbl.on('posted', () => {
     console.log('Server count posted!');
